@@ -1,0 +1,14 @@
+version: v2
+deps:
+  - buf.build/googleapis/googleapis
+modules:
+  - name: buf.build/whnova/api-riskwise-admin
+    path: ./proto/api-riskwise-admin
+  - name: buf.build/whnova/core
+    path: ./proto/core
+breaking:
+  use:
+    - FILE
+lint:
+  use:
+    - STANDARD
