@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "bufbuild.vscode-buf",
+    "DavidAnson.vscode-markdownlint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "ms-vsliveshare.vsliveshare",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml"
+  ],
+  "unwantedRecommendations": []
+}
