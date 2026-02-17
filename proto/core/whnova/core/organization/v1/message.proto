@@ -1,0 +1,9 @@
+edition = "2023";
+
+package whnova.core.organization.v1;
+
+import "google/api/field_behavior.proto";
+
+message OrgId {
+  string value = 1 [(google.api.field_behavior) = REQUIRED];
+}
