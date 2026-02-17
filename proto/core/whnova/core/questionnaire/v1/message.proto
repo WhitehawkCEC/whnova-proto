@@ -1,0 +1,537 @@
+edition = "2023";
+
+package whnova.core.questionnaire.v1;
+
+import "google/api/field_behavior.proto";
+
+enum QuestionCategory {
+  QUESTION_CATEGORY_UNSPECIFIED = 0;
+  QUESTION_CATEGORY_OC = 1;
+  QUESTION_CATEGORY_GP = 2;
+  QUESTION_CATEGORY_PR = 3;
+  QUESTION_CATEGORY_TC = 4;
+}
+
+enum Industry {
+  INDUSTRY_UNSPECIFIED = 0;
+  INDUSTRY_ARTS_AND_ENTERTAINMENT = 1;
+  INDUSTRY_WHOLESALE = 2;
+  INDUSTRY_MANAGEMENT_CONSULTING = 3;
+  INDUSTRY_MANUFACTURING_AND_INDUSTRIAL = 4;
+  INDUSTRY_PROFESSIONAL_SERVICES = 5;
+  INDUSTRY_RETAIL_NON_FOOD = 6;
+  INDUSTRY_ACCOMMODATION = 7;
+  INDUSTRY_AGRICULTURE_AND_AGRIBUSINESS = 8;
+  INDUSTRY_CONSTRUCTION = 9;
+  INDUSTRY_EDUCATION = 10;
+  INDUSTRY_MINING = 11;
+  INDUSTRY_PUBLIC_SECTOR_GOVERNMENT = 12;
+  INDUSTRY_REAL_ESTATE_AND_PROPERTY_MANAGEMENT = 13;
+  INDUSTRY_RETAIL_FOOD = 14;
+  INDUSTRY_TRANSPORTATION_AND_LOGISTICS = 15;
+  INDUSTRY_ENERGY_AND_UTILITIES = 16;
+  INDUSTRY_FINANCIAL_SERVICES = 17;
+  INDUSTRY_INFORMATION_TECHNOLOGY_SERVICES = 18;
+  INDUSTRY_MEDIA_AND_COMMUNICATIONS = 19;
+  INDUSTRY_DEFENCE = 20;
+  INDUSTRY_HEALTH_CARE = 21;
+  INDUSTRY_INSURANCE = 22;
+  INDUSTRY_LEGAL_SERVICES = 23;
+}
+
+enum RevenueRange {
+  REVENUE_RANGE_UNSPECIFIED = 0;
+  REVENUE_RANGE_UP_TO_3M = 1;
+  REVENUE_RANGE_FROM_3M_TO_10M = 2;
+  REVENUE_RANGE_FROM_10M_TO_50M = 3;
+  REVENUE_RANGE_FROM_50M_TO_500M = 4;
+  REVENUE_RANGE_ABOVE_500M = 5;
+}
+
+enum RegulatoryStatusOption {
+  REGULATORY_STATUS_OPTION_UNSPECIFIED = 0;
+  REGULATORY_STATUS_OPTION_ASX_LISTED = 1;
+  REGULATORY_STATUS_OPTION_APRA_REGULATED = 2;
+  REGULATORY_STATUS_OPTION_AFSL_LICENSE_HOLDER = 3;
+  REGULATORY_STATUS_OPTION_SOCI_REGULATED = 4;
+  REGULATORY_STATUS_OPTION_NONE_OF_THE_ABOVE = 5;
+}
+
+message RegulatoryStatus {
+  repeated RegulatoryStatusOption options = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+enum YesNoUnsure {
+  YES_NO_UNSURE_UNSPECIFIED = 0;
+  YES_NO_UNSURE_YES = 1;
+  YES_NO_UNSURE_NO = 2;
+  YES_NO_UNSURE_UNSURE = 3;
+}
+
+message L1 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    string value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message L2 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    string value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message L3 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    string value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message L4 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    string value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message L5 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    string value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message L6 {
+  string text = 1 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    bool value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q1 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    Industry value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q2 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    int32 value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q3 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    RevenueRange value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q4 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    int32 value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q5 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    bool value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q6 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    RegulatoryStatus value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q7 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q8 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q9 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q10 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q11 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q12 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q13 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q14 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q15 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q16 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q17 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q18 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q19 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q20 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q21 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q22 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q23 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q24 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q25 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q26 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q27 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q28 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q29 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q30 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q31 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q32 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q33 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q34 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q35 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message Q36 {
+  QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  string text = 2 [(google.api.field_behavior) = REQUIRED];
+
+  message Answered {
+    YesNoUnsure value = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+}
+
+message LeadQuestionnaire {
+  L1 l1 = 1 [(google.api.field_behavior) = REQUIRED];
+  L2 l2 = 2 [(google.api.field_behavior) = REQUIRED];
+  L3 l3 = 3 [(google.api.field_behavior) = REQUIRED];
+  L4 l4 = 4 [(google.api.field_behavior) = REQUIRED];
+  L5 l5 = 5 [(google.api.field_behavior) = REQUIRED];
+  L6 l6 = 6 [(google.api.field_behavior) = REQUIRED];
+}
+
+message IncompleteLeadQuestionnaireResponse {
+  L1.Answered l1 = 1 [(google.api.field_behavior) = OPTIONAL];
+  L2.Answered l2 = 2 [(google.api.field_behavior) = OPTIONAL];
+  L3.Answered l3 = 3 [(google.api.field_behavior) = OPTIONAL];
+  L4.Answered l4 = 4 [(google.api.field_behavior) = OPTIONAL];
+  L5.Answered l5 = 5 [(google.api.field_behavior) = OPTIONAL];
+  L6.Answered l6 = 6 [(google.api.field_behavior) = OPTIONAL];
+}
+
+message MainQuestionnaire {
+  Q1 q1 = 1 [(google.api.field_behavior) = REQUIRED];
+  Q2 q2 = 2 [(google.api.field_behavior) = REQUIRED];
+  Q3 q3 = 3 [(google.api.field_behavior) = REQUIRED];
+  Q4 q4 = 4 [(google.api.field_behavior) = REQUIRED];
+  Q5 q5 = 5 [(google.api.field_behavior) = REQUIRED];
+  Q6 q6 = 6 [(google.api.field_behavior) = REQUIRED];
+  Q7 q7 = 7 [(google.api.field_behavior) = REQUIRED];
+  Q8 q8 = 8 [(google.api.field_behavior) = REQUIRED];
+  Q9 q9 = 9 [(google.api.field_behavior) = REQUIRED];
+  Q10 q10 = 10 [(google.api.field_behavior) = REQUIRED];
+  Q11 q11 = 11 [(google.api.field_behavior) = REQUIRED];
+  Q12 q12 = 12 [(google.api.field_behavior) = REQUIRED];
+  Q13 q13 = 13 [(google.api.field_behavior) = REQUIRED];
+  Q14 q14 = 14 [(google.api.field_behavior) = REQUIRED];
+  Q15 q15 = 15 [(google.api.field_behavior) = REQUIRED];
+  Q16 q16 = 16 [(google.api.field_behavior) = REQUIRED];
+  Q17 q17 = 17 [(google.api.field_behavior) = REQUIRED];
+  Q18 q18 = 18 [(google.api.field_behavior) = REQUIRED];
+  Q19 q19 = 19 [(google.api.field_behavior) = REQUIRED];
+  Q20 q20 = 20 [(google.api.field_behavior) = REQUIRED];
+  Q21 q21 = 21 [(google.api.field_behavior) = REQUIRED];
+  Q22 q22 = 22 [(google.api.field_behavior) = REQUIRED];
+  Q23 q23 = 23 [(google.api.field_behavior) = REQUIRED];
+  Q24 q24 = 24 [(google.api.field_behavior) = REQUIRED];
+  Q25 q25 = 25 [(google.api.field_behavior) = REQUIRED];
+  Q26 q26 = 26 [(google.api.field_behavior) = REQUIRED];
+  Q27 q27 = 27 [(google.api.field_behavior) = REQUIRED];
+  Q28 q28 = 28 [(google.api.field_behavior) = REQUIRED];
+  Q29 q29 = 29 [(google.api.field_behavior) = REQUIRED];
+  Q30 q30 = 30 [(google.api.field_behavior) = REQUIRED];
+  Q31 q31 = 31 [(google.api.field_behavior) = REQUIRED];
+  Q32 q32 = 32 [(google.api.field_behavior) = REQUIRED];
+  Q33 q33 = 33 [(google.api.field_behavior) = REQUIRED];
+  Q34 q34 = 34 [(google.api.field_behavior) = REQUIRED];
+  Q35 q35 = 35 [(google.api.field_behavior) = REQUIRED];
+  Q36 q36 = 36 [(google.api.field_behavior) = REQUIRED];
+}
+
+message IncompleteMainQuestionnaireResponse {
+  Q1.Answered q1 = 1 [(google.api.field_behavior) = OPTIONAL];
+  Q2.Answered q2 = 2 [(google.api.field_behavior) = OPTIONAL];
+  Q3.Answered q3 = 3 [(google.api.field_behavior) = OPTIONAL];
+  Q4.Answered q4 = 4 [(google.api.field_behavior) = OPTIONAL];
+  Q5.Answered q5 = 5 [(google.api.field_behavior) = OPTIONAL];
+  Q6.Answered q6 = 6 [(google.api.field_behavior) = OPTIONAL];
+  Q7.Answered q7 = 7 [(google.api.field_behavior) = OPTIONAL];
+  Q8.Answered q8 = 8 [(google.api.field_behavior) = OPTIONAL];
+  Q9.Answered q9 = 9 [(google.api.field_behavior) = OPTIONAL];
+  Q10.Answered q10 = 10 [(google.api.field_behavior) = OPTIONAL];
+  Q11.Answered q11 = 11 [(google.api.field_behavior) = OPTIONAL];
+  Q12.Answered q12 = 12 [(google.api.field_behavior) = OPTIONAL];
+  Q13.Answered q13 = 13 [(google.api.field_behavior) = OPTIONAL];
+  Q14.Answered q14 = 14 [(google.api.field_behavior) = OPTIONAL];
+  Q15.Answered q15 = 15 [(google.api.field_behavior) = OPTIONAL];
+  Q16.Answered q16 = 16 [(google.api.field_behavior) = OPTIONAL];
+  Q17.Answered q17 = 17 [(google.api.field_behavior) = OPTIONAL];
+  Q18.Answered q18 = 18 [(google.api.field_behavior) = OPTIONAL];
+  Q19.Answered q19 = 19 [(google.api.field_behavior) = OPTIONAL];
+  Q20.Answered q20 = 20 [(google.api.field_behavior) = OPTIONAL];
+  Q21.Answered q21 = 21 [(google.api.field_behavior) = OPTIONAL];
+  Q22.Answered q22 = 22 [(google.api.field_behavior) = OPTIONAL];
+  Q23.Answered q23 = 23 [(google.api.field_behavior) = OPTIONAL];
+  Q24.Answered q24 = 24 [(google.api.field_behavior) = OPTIONAL];
+  Q25.Answered q25 = 25 [(google.api.field_behavior) = OPTIONAL];
+  Q26.Answered q26 = 26 [(google.api.field_behavior) = OPTIONAL];
+  Q27.Answered q27 = 27 [(google.api.field_behavior) = OPTIONAL];
+  Q28.Answered q28 = 28 [(google.api.field_behavior) = OPTIONAL];
+  Q29.Answered q29 = 29 [(google.api.field_behavior) = OPTIONAL];
+  Q30.Answered q30 = 30 [(google.api.field_behavior) = OPTIONAL];
+  Q31.Answered q31 = 31 [(google.api.field_behavior) = OPTIONAL];
+  Q32.Answered q32 = 32 [(google.api.field_behavior) = OPTIONAL];
+  Q33.Answered q33 = 33 [(google.api.field_behavior) = OPTIONAL];
+  Q34.Answered q34 = 34 [(google.api.field_behavior) = OPTIONAL];
+  Q35.Answered q35 = 35 [(google.api.field_behavior) = OPTIONAL];
+  Q36.Answered q36 = 36 [(google.api.field_behavior) = OPTIONAL];
+}
