@@ -449,13 +449,22 @@ message LeadQuestionnaire {
   L6 l6 = 6 [(google.api.field_behavior) = REQUIRED];
 }
 
-message IncompleteLeadQuestionnaireResponse {
+message LeadQuestionnaireIncompleteSubmission {
   L1.Answered l1 = 1 [(google.api.field_behavior) = OPTIONAL];
   L2.Answered l2 = 2 [(google.api.field_behavior) = OPTIONAL];
   L3.Answered l3 = 3 [(google.api.field_behavior) = OPTIONAL];
   L4.Answered l4 = 4 [(google.api.field_behavior) = OPTIONAL];
   L5.Answered l5 = 5 [(google.api.field_behavior) = OPTIONAL];
   L6.Answered l6 = 6 [(google.api.field_behavior) = OPTIONAL];
+}
+
+message LeadQuestionnaireCompleteSubmission {
+  L1.Answered l1 = 1 [(google.api.field_behavior) = REQUIRED];
+  L2.Answered l2 = 2 [(google.api.field_behavior) = REQUIRED];
+  L3.Answered l3 = 3 [(google.api.field_behavior) = REQUIRED];
+  L4.Answered l4 = 4 [(google.api.field_behavior) = REQUIRED];
+  L5.Answered l5 = 5 [(google.api.field_behavior) = REQUIRED];
+  L6.Answered l6 = 6 [(google.api.field_behavior) = REQUIRED];
 }
 
 message MainQuestionnaire {
@@ -497,7 +506,46 @@ message MainQuestionnaire {
   Q36 q36 = 36 [(google.api.field_behavior) = REQUIRED];
 }
 
-message IncompleteMainQuestionnaireResponse {
+message MainQuestionnaireCompleteSubmission {
+  Q1.Answered q1 = 1 [(google.api.field_behavior) = REQUIRED];
+  Q2.Answered q2 = 2 [(google.api.field_behavior) = REQUIRED];
+  Q3.Answered q3 = 3 [(google.api.field_behavior) = REQUIRED];
+  Q4.Answered q4 = 4 [(google.api.field_behavior) = REQUIRED];
+  Q5.Answered q5 = 5 [(google.api.field_behavior) = REQUIRED];
+  Q6.Answered q6 = 6 [(google.api.field_behavior) = REQUIRED];
+  Q7.Answered q7 = 7 [(google.api.field_behavior) = REQUIRED];
+  Q8.Answered q8 = 8 [(google.api.field_behavior) = REQUIRED];
+  Q9.Answered q9 = 9 [(google.api.field_behavior) = REQUIRED];
+  Q10.Answered q10 = 10 [(google.api.field_behavior) = REQUIRED];
+  Q11.Answered q11 = 11 [(google.api.field_behavior) = REQUIRED];
+  Q12.Answered q12 = 12 [(google.api.field_behavior) = REQUIRED];
+  Q13.Answered q13 = 13 [(google.api.field_behavior) = REQUIRED];
+  Q14.Answered q14 = 14 [(google.api.field_behavior) = REQUIRED];
+  Q15.Answered q15 = 15 [(google.api.field_behavior) = REQUIRED];
+  Q16.Answered q16 = 16 [(google.api.field_behavior) = REQUIRED];
+  Q17.Answered q17 = 17 [(google.api.field_behavior) = REQUIRED];
+  Q18.Answered q18 = 18 [(google.api.field_behavior) = REQUIRED];
+  Q19.Answered q19 = 19 [(google.api.field_behavior) = REQUIRED];
+  Q20.Answered q20 = 20 [(google.api.field_behavior) = REQUIRED];
+  Q21.Answered q21 = 21 [(google.api.field_behavior) = REQUIRED];
+  Q22.Answered q22 = 22 [(google.api.field_behavior) = REQUIRED];
+  Q23.Answered q23 = 23 [(google.api.field_behavior) = REQUIRED];
+  Q24.Answered q24 = 24 [(google.api.field_behavior) = REQUIRED];
+  Q25.Answered q25 = 25 [(google.api.field_behavior) = REQUIRED];
+  Q26.Answered q26 = 26 [(google.api.field_behavior) = REQUIRED];
+  Q27.Answered q27 = 27 [(google.api.field_behavior) = REQUIRED];
+  Q28.Answered q28 = 28 [(google.api.field_behavior) = REQUIRED];
+  Q29.Answered q29 = 29 [(google.api.field_behavior) = REQUIRED];
+  Q30.Answered q30 = 30 [(google.api.field_behavior) = REQUIRED];
+  Q31.Answered q31 = 31 [(google.api.field_behavior) = REQUIRED];
+  Q32.Answered q32 = 32 [(google.api.field_behavior) = REQUIRED];
+  Q33.Answered q33 = 33 [(google.api.field_behavior) = REQUIRED];
+  Q34.Answered q34 = 34 [(google.api.field_behavior) = REQUIRED];
+  Q35.Answered q35 = 35 [(google.api.field_behavior) = REQUIRED];
+  Q36.Answered q36 = 36 [(google.api.field_behavior) = REQUIRED];
+}
+
+message MainQuestionnaireIncompleteSubmission {
   Q1.Answered q1 = 1 [(google.api.field_behavior) = OPTIONAL];
   Q2.Answered q2 = 2 [(google.api.field_behavior) = OPTIONAL];
   Q3.Answered q3 = 3 [(google.api.field_behavior) = OPTIONAL];
