@@ -1,0 +1,16 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.main_questionnaire_submissions.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+}
+
+message CreateRequest {
+  whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission submission = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {}
