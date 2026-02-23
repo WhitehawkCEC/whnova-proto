@@ -1,0 +1,25 @@
+edition = "2023";
+
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
+package whnova.api.riskwise.client.resources.main_questionnaire__answers__q28.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+  rpc Set(SetRequest) returns (SetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  whnova.core.questionnaire.v1.Q28.Answered answer = 1 [(google.api.field_behavior) = OPTIONAL];
+}
+
+message SetRequest {
+  whnova.core.questionnaire.v1.Q28.Answered answer = 1 [(google.api.field_behavior) = OPTIONAL];
+}
+
+message SetResponse {
+}
