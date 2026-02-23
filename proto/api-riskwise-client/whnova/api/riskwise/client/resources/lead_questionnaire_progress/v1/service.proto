@@ -1,0 +1,16 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.lead_questionnaire_progress.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  whnova.core.questionnaire.v1.LeadQuestionnaireIncompleteSubmission submission = 1 [(google.api.field_behavior) = REQUIRED];
+}
