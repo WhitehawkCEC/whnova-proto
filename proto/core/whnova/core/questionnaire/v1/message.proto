@@ -583,3 +583,7 @@ message MainQuestionnaireIncompleteSubmission {
   Q35.Answered q35 = 35 [(google.api.field_behavior) = OPTIONAL];
   Q36.Answered q36 = 36 [(google.api.field_behavior) = OPTIONAL];
 }
+
+message QuestionnaireSubmissionId {
+  string value = 1 [(google.api.field_behavior) = REQUIRED];
+}
