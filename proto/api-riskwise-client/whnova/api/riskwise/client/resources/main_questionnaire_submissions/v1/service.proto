@@ -13,4 +13,6 @@ message CreateRequest {
   whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission submission = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
-message CreateResponse {}
+message CreateResponse {
+  whnova.core.questionnaire.v1.QuestionnaireSubmissionId id = 1 [(google.api.field_behavior) = REQUIRED];
+}
