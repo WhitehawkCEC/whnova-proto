@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/whitehawkcec/whnova-proto/compare/0.3.1...0.3.2) (2026-02-26)
+
+
+### Features
+
+* **proto:** add client `full_questionnaire_submissions/v1` ([cedea0f](https://github.com/whitehawkcec/whnova-proto/commit/cedea0fc93bcaf92241d9703453ac1823049d6ac))
+
 ### [0.3.1](https://github.com/whitehawkcec/whnova-proto/compare/0.3.0...0.3.1) (2026-02-26)
 
 
