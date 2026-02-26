@@ -1,0 +1,32 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.full_questionnaire_submissions.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+  rpc List(ListRequest) returns (stream ListResponse) {}
+}
+
+message CreateRequest {
+  whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 1 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {
+  whnova.core.questionnaire.v1.QuestionnaireSubmissionId id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListRequest {}
+
+message ListResponse {
+  message Entry {
+    whnova.core.questionnaire.v1.QuestionnaireSubmissionId id = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 2 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
+}
