@@ -7,6 +7,7 @@ import "whnova/core/questionnaire/v1/message.proto";
 
 service Service {
   rpc Create(CreateRequest) returns (CreateResponse) {}
+  rpc List(ListRequest) returns (stream ListResponse) {}
 }
 
 message CreateRequest {
@@ -15,4 +16,15 @@ message CreateRequest {
 
 message CreateResponse {
   whnova.core.questionnaire.v1.QuestionnaireSubmissionId id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListRequest {}
+
+message ListResponse {
+  message Entry {
+    whnova.core.questionnaire.v1.QuestionnaireSubmissionId id = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission submission = 2 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
 }
