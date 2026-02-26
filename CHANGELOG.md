@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/whitehawkcec/whnova-proto/compare/0.3.0...0.3.1) (2026-02-26)
+
+
+### Features
+
+* **proto:** add `main_questionnaire_submissions/v1` `List` ([30db813](https://github.com/whitehawkcec/whnova-proto/commit/30db813ed5b3de720523567374f6a3e159dad793))
+* **proto:** add `QuestionnaireSubmissionId` ([30f7647](https://github.com/whitehawkcec/whnova-proto/commit/30f7647cb00c3afde43c9e6e6514cd9ec94af43c))
+* **proto:** return generated ID after create ([80764cc](https://github.com/whitehawkcec/whnova-proto/commit/80764ccf54e572574eee52a10e6ef32729f0bcdb))
+
 ## [0.3.0](https://github.com/whitehawkcec/whnova-proto/compare/0.2.1...0.3.0) (2026-02-23)
 
 ### ⚠ BREAKING CHANGES
