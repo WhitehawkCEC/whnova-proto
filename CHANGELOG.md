@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/WhitehawkCEC/whnova-proto/compare/0.3.2...0.4.0) (2026-03-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* **proto:** remove service `main_questionnaire_submissions.v1`
+
+### Features
+
+* **proto:** add endpoint for user attribution (audit log) ([2201b1e](https://github.com/WhitehawkCEC/whnova-proto/commit/2201b1e93a09540c82dbf8f8808ebee9a6290cad))
+* **proto:** remove service `main_questionnaire_submissions.v1` ([59a3783](https://github.com/WhitehawkCEC/whnova-proto/commit/59a3783d593ecc857b90ee7e83d0d91b21c3838a))
+
 ### [0.3.2](https://github.com/whitehawkcec/whnova-proto/compare/0.3.1...0.3.2) (2026-02-26)
 
 ### Features
