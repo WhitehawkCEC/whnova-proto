@@ -1,0 +1,26 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.main_questionnaire_audit_log.v1;
+
+import "google/api/field_behavior.proto";
+import "google/protobuf/timestamp.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  message Change {
+    string answered_by = 1 [(google.api.field_behavior) = REQUIRED];
+    google.protobuf.Timestamp answered_at = 2 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  message QuestionLog {
+    string question_id = 1 [(google.api.field_behavior) = REQUIRED];
+    repeated Change changes = 2 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated QuestionLog questions = 1 [(google.api.field_behavior) = REQUIRED];
+}
