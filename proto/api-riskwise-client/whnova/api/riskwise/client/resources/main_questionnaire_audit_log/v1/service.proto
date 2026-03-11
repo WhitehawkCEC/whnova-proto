@@ -1,6 +1,6 @@
 edition = "2023";
 
-package whnova.api.riskwise.client.resources.main_questionnaire_audit_log.v1;
+package whnova.api.riskwise.client.resources.main_questionnaire__audit_log.v1;
 
 import "google/api/field_behavior.proto";
 import "google/protobuf/timestamp.proto";
