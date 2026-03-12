@@ -4,22 +4,20 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.1](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.0...0.4.1) (2026-03-11)
 
-
 ### Bug Fixes
 
-* **proto:** package name ([7a83e88](https://github.com/WhitehawkCEC/whnova-proto/commit/7a83e88879cc02b69342a8bd3821bac1a1ba64b0))
+- **proto:** package name ([7a83e88](https://github.com/WhitehawkCEC/whnova-proto/commit/7a83e88879cc02b69342a8bd3821bac1a1ba64b0))
 
 ## [0.4.0](https://github.com/WhitehawkCEC/whnova-proto/compare/0.3.2...0.4.0) (2026-03-11)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **proto:** remove service `main_questionnaire_submissions.v1`
+- **proto:** remove service `main_questionnaire_submissions.v1`
 
 ### Features
 
-* **proto:** add endpoint for user attribution (audit log) ([2201b1e](https://github.com/WhitehawkCEC/whnova-proto/commit/2201b1e93a09540c82dbf8f8808ebee9a6290cad))
-* **proto:** remove service `main_questionnaire_submissions.v1` ([59a3783](https://github.com/WhitehawkCEC/whnova-proto/commit/59a3783d593ecc857b90ee7e83d0d91b21c3838a))
+- **proto:** add endpoint for user attribution (audit log) ([2201b1e](https://github.com/WhitehawkCEC/whnova-proto/commit/2201b1e93a09540c82dbf8f8808ebee9a6290cad))
+- **proto:** remove service `main_questionnaire_submissions.v1` ([59a3783](https://github.com/WhitehawkCEC/whnova-proto/commit/59a3783d593ecc857b90ee7e83d0d91b21c3838a))
 
 ### [0.3.2](https://github.com/whitehawkcec/whnova-proto/compare/0.3.1...0.3.2) (2026-02-26)
 
