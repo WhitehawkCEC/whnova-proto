@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.1...0.4.2) (2026-03-16)
+
+
+### Bug Fixes
+
+* **proto:** file name ([6527346](https://github.com/WhitehawkCEC/whnova-proto/commit/6527346c87c947cf75164f9deaa39cf94debcb56))
+
 ### [0.4.1](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.0...0.4.1) (2026-03-11)
 
 ### Bug Fixes
