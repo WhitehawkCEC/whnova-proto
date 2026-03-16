@@ -1,9 +1,10 @@
 edition = "2023";
 
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
 package whnova.api.riskwise.client.resources.main_questionnaire__audit_log.v1;
 
 import "google/api/field_behavior.proto";
-import "google/protobuf/timestamp.proto";
+import "whnova/core/time/v1/message.proto";
 
 service Service {
   rpc Get(GetRequest) returns (GetResponse) {}
@@ -14,7 +15,7 @@ message GetRequest {}
 message GetResponse {
   message Change {
     string answered_by = 1 [(google.api.field_behavior) = REQUIRED];
-    google.protobuf.Timestamp answered_at = 2 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.time.v1.IsoDateTime answered_at = 2 [(google.api.field_behavior) = REQUIRED];
   }
 
   message QuestionLog {
