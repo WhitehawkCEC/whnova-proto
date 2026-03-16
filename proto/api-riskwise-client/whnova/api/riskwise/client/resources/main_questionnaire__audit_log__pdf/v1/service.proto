@@ -1,0 +1,18 @@
+edition = "2023";
+
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
+package whnova.api.riskwise.client.resources.main_questionnaire__audit_log__pdf.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/time/v1/message.proto";
+
+
+service Service {
+  rpc Get(GetRequest) returns (stream GetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  bytes chunk = 1;
+}
