@@ -6,7 +6,6 @@ package whnova.api.riskwise.client.resources.main_questionnaire__audit_log__pdf.
 import "google/api/field_behavior.proto";
 import "whnova/core/time/v1/message.proto";
 
-
 service Service {
   rpc Get(GetRequest) returns (stream GetResponse) {}
 }
