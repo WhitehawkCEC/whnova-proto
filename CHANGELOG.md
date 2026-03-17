@@ -6,17 +6,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.3](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.2...0.4.3) (2026-03-16)
 
-
 ### Bug Fixes
 
-* **proto:** IsoDateTime instead of Timestamp. add lint ignore ([78208e8](https://github.com/WhitehawkCEC/whnova-proto/commit/78208e8e36f4bc385d6b4fa8e10dbb20b97ca537))
+- **proto:** IsoDateTime instead of Timestamp. add lint ignore ([78208e8](https://github.com/WhitehawkCEC/whnova-proto/commit/78208e8e36f4bc385d6b4fa8e10dbb20b97ca537))
 
 ### [0.4.2](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.1...0.4.2) (2026-03-16)
 
-
 ### Bug Fixes
 
-* **proto:** file name ([6527346](https://github.com/WhitehawkCEC/whnova-proto/commit/6527346c87c947cf75164f9deaa39cf94debcb56))
+- **proto:** file name ([6527346](https://github.com/WhitehawkCEC/whnova-proto/commit/6527346c87c947cf75164f9deaa39cf94debcb56))
 
 ### [0.4.1](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.0...0.4.1) (2026-03-11)
 
