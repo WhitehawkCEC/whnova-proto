@@ -1,0 +1,20 @@
+edition = "2023";
+
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
+package whnova.api.riskwise.client.resources.full_questionnaire_submissions__0__assessment_pdf.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/indirect_file/v1/message.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message GetRequest {
+  whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message GetResponse {
+  whnova.core.indirect_file.v1.IndirectDownloadViaGet download = 1 [(google.api.field_behavior) = REQUIRED];
+}
