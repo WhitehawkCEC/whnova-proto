@@ -1,0 +1,72 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.org_audit_log.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/time/v1/message.proto";
+
+service Service {
+  rpc List(ListRequest) returns (ListResponse) {}
+}
+
+message ListRequest {}
+
+message ListResponse {
+  enum Category {
+    CATEGORY_UNSPECIFIED = 0;
+    CATEGORY_AUTHENTICATION = 1;
+    CATEGORY_AUTHORIZATION = 2;
+    CATEGORY_USER_MANAGEMENT = 3;
+    CATEGORY_ORGANIZATION = 4;
+    CATEGORY_ASSESSMENT = 5;
+    CATEGORY_PAYMENT = 6;
+    CATEGORY_REPORT = 7;
+  }
+
+  enum Action {
+    ACTION_UNSPECIFIED = 0;
+    ACTION_LOGIN = 1;
+    ACTION_LOGOUT = 2;
+    ACTION_MFA = 3;
+    ACTION_PASSWORD_CHANGE = 4;
+    ACTION_ROLE_CHANGE = 5;
+    ACTION_ACCESS_DENIED = 6;
+    ACTION_CREATE_USER = 7;
+    ACTION_UPDATE_USER = 8;
+    ACTION_DELETE_USER = 9;
+    ACTION_CREATE_ORG = 10;
+    ACTION_UPDATE_ORG = 11;
+    ACTION_DELETE_ORG = 12;
+    ACTION_CREATE_ASSESSMENT = 13;
+    ACTION_SUBMIT_ASSESSMENT = 14;
+    ACTION_ACCESS_ASSESSMENT = 15;
+    ACTION_TRANSACTION = 16;
+    ACTION_REFUND = 17;
+    ACTION_GENERATE_REPORT = 18;
+    ACTION_DOWNLOAD_REPORT = 19;
+  }
+
+  enum Result {
+    RESULT_UNSPECIFIED = 0;
+    RESULT_SUCCESS = 1;
+    RESULT_FAILURE = 2;
+    RESULT_DENIED = 3;
+  }
+
+  message Entry {
+    string id = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.time.v1.IsoDateTime timestamp = 2 [(google.api.field_behavior) = REQUIRED];
+    Action action = 3 [(google.api.field_behavior) = REQUIRED];
+    Category category = 4 [(google.api.field_behavior) = REQUIRED];
+    string user_id = 5 [(google.api.field_behavior) = REQUIRED];
+    string organization_id = 6 [(google.api.field_behavior) = REQUIRED];
+    string resource_type = 7 [(google.api.field_behavior) = REQUIRED];
+    string resource_id = 8 [(google.api.field_behavior) = REQUIRED];
+    string details = 9 [(google.api.field_behavior) = REQUIRED];
+    string ip_address = 10 [(google.api.field_behavior) = REQUIRED];
+    string user_agent = 11 [(google.api.field_behavior) = REQUIRED];
+    Result result = 12 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
+}
