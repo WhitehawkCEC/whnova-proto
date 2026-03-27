@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.6](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.5...0.4.6) (2026-03-26)
 
-
 ### Bug Fixes
 
-* **proto:** add action for updating an answer ([5bad41f](https://github.com/WhitehawkCEC/whnova-proto/commit/5bad41fd64e388b75e60428f53a1b271082727ed))
+- **proto:** add action for updating an answer ([5bad41f](https://github.com/WhitehawkCEC/whnova-proto/commit/5bad41fd64e388b75e60428f53a1b271082727ed))
 
 ### [0.4.5](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.4...0.4.5) (2026-03-26)
 
-
 ### Features
 
-* **proto:** add endpoint for organization audit log ([33ccd51](https://github.com/WhitehawkCEC/whnova-proto/commit/33ccd5108b2bc8f8a97cb5def077e624a05223d2))
+- **proto:** add endpoint for organization audit log ([33ccd51](https://github.com/WhitehawkCEC/whnova-proto/commit/33ccd5108b2bc8f8a97cb5def077e624a05223d2))
 
 ### [0.4.4](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.3...0.4.4) (2026-03-16)
 
