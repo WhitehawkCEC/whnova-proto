@@ -1,5 +1,6 @@
 version: v2
 deps:
+  - buf.build/bufbuild/protovalidate
   - buf.build/googleapis/googleapis
 modules:
   - name: buf.build/whnova/whnova-api-riskwise-client
