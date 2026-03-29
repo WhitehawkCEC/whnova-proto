@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.7](https://github.com/whitehawkcec/whnova-proto/compare/0.4.6...0.4.7) (2026-03-29)
+
+
+### Features
+
+* **api-riskwise-client:** add `resources.full_questionnaire_submissions__0__assessment_pdf.v1` ([919c07f](https://github.com/whitehawkcec/whnova-proto/commit/919c07f3140e97071a069ea2f0372e186ef00025))
+* **core:** add `indirect_file.v1` ([1780a55](https://github.com/whitehawkcec/whnova-proto/commit/1780a553c9adb0a2da853d14aa3f4deb7c6096e9))
+* **proto/api-riskwise-client:** add `resources.questionnaire_meta.v1` ([d3a75b4](https://github.com/whitehawkcec/whnova-proto/commit/d3a75b48211419f0c09b5f4600a74e7fc44ab1a8))
+* **proto/core:** add `QuestionCode` ([d019417](https://github.com/whitehawkcec/whnova-proto/commit/d0194175c1ee7648fa5ff0614083c10b942b9466))
+
 ### [0.4.6](https://github.com/WhitehawkCEC/whnova-proto/compare/0.4.5...0.4.6) (2026-03-26)
 
 ### Bug Fixes
