@@ -1,0 +1,79 @@
+edition = "2023";
+
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
+package whnova.api.riskwise.client.resources.questionnaire_meta.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  MainQuestionnaireMeta main_meta = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message MainQuestionnaireMeta {
+  QuestionMeta q1 = 1 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q2 = 2 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q3 = 3 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q4 = 4 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q5 = 5 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q6 = 6 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q7 = 7 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q8 = 8 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q9 = 9 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q10 = 10 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q11 = 11 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q12 = 12 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q13 = 13 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q14 = 14 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q15 = 15 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q16 = 16 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q17 = 17 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q18 = 18 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q19 = 19 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q20 = 20 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q21 = 21 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q22 = 22 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q23 = 23 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q24 = 24 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q25 = 25 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q26 = 26 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q27 = 27 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q28 = 28 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q29 = 29 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q30 = 30 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q31 = 31 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q32 = 32 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q33 = 33 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q34 = 34 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q35 = 35 [(google.api.field_behavior) = REQUIRED];
+  QuestionMeta q36 = 36 [(google.api.field_behavior) = REQUIRED];
+}
+
+message QuestionMeta {
+  whnova.core.questionnaire.v1.QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.v1.QuestionCode code = 2 [(google.api.field_behavior) = REQUIRED];
+  string help_text = 3 [(google.api.field_behavior) = REQUIRED];
+  repeated FrameworkMappingResult frameworks = 4 [(google.api.field_behavior) = REQUIRED];
+}
+
+message FrameworkMappingResult {
+  string framework_id = 1 [(google.api.field_behavior) = REQUIRED];
+  string display_name = 2 [(google.api.field_behavior) = REQUIRED];
+  repeated ReferenceGroup reference_groups = 3 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ReferenceGroup {
+  string group_name = 1 [(google.api.field_behavior) = REQUIRED];
+  repeated Reference references = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message Reference {
+  string id = 1 [(google.api.field_behavior) = REQUIRED];
+  string description = 2 [(google.api.field_behavior) = REQUIRED];
+}
