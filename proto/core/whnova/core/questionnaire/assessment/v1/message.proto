@@ -1,0 +1,10 @@
+edition = "2023";
+
+package whnova.core.questionnaire.assessment.v1;
+
+enum RiskLevel {
+  RISK_LEVEL_UNSPECIFIED = 0;
+  RISK_LEVEL_LOW = 1;
+  RISK_LEVEL_MEDIUM = 2;
+  RISK_LEVEL_HIGH = 3;
+}
