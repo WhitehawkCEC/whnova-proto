@@ -2,9 +2,16 @@ edition = "2023";
 
 package whnova.core.questionnaire.assessment.v1;
 
+import "google/api/field_behavior.proto";
+
 enum RiskLevel {
   RISK_LEVEL_UNSPECIFIED = 0;
   RISK_LEVEL_LOW = 1;
   RISK_LEVEL_MEDIUM = 2;
   RISK_LEVEL_HIGH = 3;
+}
+
+message RiskScore {
+  int32 value = 1 [(google.api.field_behavior) = REQUIRED];
+  int32 max_value = 2 [(google.api.field_behavior) = REQUIRED];
 }
