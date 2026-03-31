@@ -12,6 +12,6 @@ enum RiskLevel {
 }
 
 message RiskScore {
-  int32 value = 1 [(google.api.field_behavior) = REQUIRED];
-  int32 max_value = 2 [(google.api.field_behavior) = REQUIRED];
+  double value = 1 [(google.api.field_behavior) = REQUIRED];
+  double max_value = 2 [(google.api.field_behavior) = REQUIRED];
 }
