@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/whitehawkcec/whnova-proto/compare/0.4.8...0.5.0) (2026-03-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **proto/core:** switch `int32` -> `double` for scores
+
+### Features
+
+* **proto/core:** switch `int32` -> `double` for scores ([25b4be7](https://github.com/whitehawkcec/whnova-proto/commit/25b4be7694dd591059da65a2469488469de2c883))
+
 ### [0.4.8](https://github.com/whitehawkcec/whnova-proto/compare/0.4.7...0.4.8) (2026-03-31)
 
 
