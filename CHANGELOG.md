@@ -4,24 +4,22 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [0.5.0](https://github.com/whitehawkcec/whnova-proto/compare/0.4.8...0.5.0) (2026-03-31)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **proto/core:** switch `int32` -> `double` for scores
+- **proto/core:** switch `int32` -> `double` for scores
 
 ### Features
 
-* **proto/core:** switch `int32` -> `double` for scores ([25b4be7](https://github.com/whitehawkcec/whnova-proto/commit/25b4be7694dd591059da65a2469488469de2c883))
+- **proto/core:** switch `int32` -> `double` for scores ([25b4be7](https://github.com/whitehawkcec/whnova-proto/commit/25b4be7694dd591059da65a2469488469de2c883))
 
 ### [0.4.8](https://github.com/whitehawkcec/whnova-proto/compare/0.4.7...0.4.8) (2026-03-31)
 
-
 ### Features
 
-* **proto/api-riskwise-client:** add `full_questionnaire_submissions.v1` `Read` ([dfff0e1](https://github.com/whitehawkcec/whnova-proto/commit/dfff0e151674a47478256764784d88f47fea3d6a))
-* **proto/api-riskwise-client:** include risk score/level for each submission ([3fb48a6](https://github.com/whitehawkcec/whnova-proto/commit/3fb48a6ba547220051e7a2cb02fa1ca69b0124d9))
-* **proto/core:** add `RiskLevel` ([bd75ac6](https://github.com/whitehawkcec/whnova-proto/commit/bd75ac648f989f5653c42cf1b157e34f2defb51f))
-* **proto/core:** add `RiskScore` ([a63adf5](https://github.com/whitehawkcec/whnova-proto/commit/a63adf5e327a87e65ce4c13f4676a6fbcb975c31))
+- **proto/api-riskwise-client:** add `full_questionnaire_submissions.v1` `Read` ([dfff0e1](https://github.com/whitehawkcec/whnova-proto/commit/dfff0e151674a47478256764784d88f47fea3d6a))
+- **proto/api-riskwise-client:** include risk score/level for each submission ([3fb48a6](https://github.com/whitehawkcec/whnova-proto/commit/3fb48a6ba547220051e7a2cb02fa1ca69b0124d9))
+- **proto/core:** add `RiskLevel` ([bd75ac6](https://github.com/whitehawkcec/whnova-proto/commit/bd75ac648f989f5653c42cf1b157e34f2defb51f))
+- **proto/core:** add `RiskScore` ([a63adf5](https://github.com/whitehawkcec/whnova-proto/commit/a63adf5e327a87e65ce4c13f4676a6fbcb975c31))
 
 ### [0.4.7](https://github.com/whitehawkcec/whnova-proto/compare/0.4.6...0.4.7) (2026-03-29)
 
