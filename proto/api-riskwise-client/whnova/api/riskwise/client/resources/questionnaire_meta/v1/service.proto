@@ -4,6 +4,7 @@ edition = "2023";
 package whnova.api.riskwise.client.resources.questionnaire_meta.v1;
 
 import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/assessment/v1/message.proto";
 import "whnova/core/questionnaire/v1/message.proto";
 
 service Service {
@@ -14,6 +15,7 @@ message GetRequest {}
 
 message GetResponse {
   MainQuestionnaireMeta main_meta = 1 [(google.api.field_behavior) = REQUIRED];
+  repeated RiskLevelBand risk_level_bands = 2 [(google.api.field_behavior) = REQUIRED];
 }
 
 message MainQuestionnaireMeta {
@@ -76,4 +78,21 @@ message ReferenceGroup {
 message Reference {
   string id = 1 [(google.api.field_behavior) = REQUIRED];
   string description = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ScoreRange {
+  double lower_bound = 1 [(google.api.field_behavior) = REQUIRED];
+  double upper_bound = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message RiskLevelBand {
+  whnova.core.questionnaire.assessment.v1.RiskLevel level = 1 [(google.api.field_behavior) = REQUIRED];
+  oneof bound {
+    // Unbounded below. e.g. < 77
+    double less_than = 2;
+    // Both lower and upper bound. e.g. >= `lower` and <= `upper`
+    ScoreRange closed = 3;
+    // Unbounded above. e.g. > 160
+    double greater_than = 4;
+  }
 }
