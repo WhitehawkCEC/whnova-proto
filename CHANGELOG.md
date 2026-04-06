@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/whitehawkcec/whnova-proto/compare/0.5.0...0.5.1) (2026-04-06)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `questionnaire_meta.v1` `GetResponse` `risk_level_bands` ([2ea5868](https://github.com/whitehawkcec/whnova-proto/commit/2ea586878cd7eb55943b385a9139ccd3b56f9c48))
+
 ## [0.5.0](https://github.com/whitehawkcec/whnova-proto/compare/0.4.8...0.5.0) (2026-03-31)
 
 ### ⚠ BREAKING CHANGES
