@@ -1,0 +1,18 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.credit_checkout.v1;
+
+import "google/api/field_behavior.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+}
+
+message CreateRequest {
+  int32 amount = 1 [(google.api.field_behavior) = REQUIRED];
+  string currency = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {
+  string checkout_url = 1 [(google.api.field_behavior) = REQUIRED];
+}
