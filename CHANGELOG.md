@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.2](https://github.com/WhitehawkCEC/whnova-proto/compare/0.5.1...0.5.2) (2026-04-07)
+
+
+### Features
+
+* **proto:** add credit checkout service ([e5c971a](https://github.com/WhitehawkCEC/whnova-proto/commit/e5c971ad56b47f44a3df579e2fb8ffdec1e57c00))
+
 ### [0.5.1](https://github.com/whitehawkcec/whnova-proto/compare/0.5.0...0.5.1) (2026-04-06)
 
 ### Features
