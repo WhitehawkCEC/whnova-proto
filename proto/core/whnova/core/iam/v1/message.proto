@@ -1,0 +1,13 @@
+edition = "2023";
+
+package whnova.core.iam.v1;
+
+import "google/api/field_behavior.proto";
+
+message RoleId {
+  string value = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message PermissionId {
+  string value = 1 [(google.api.field_behavior) = REQUIRED];
+}
