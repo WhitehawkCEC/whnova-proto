@@ -1,0 +1,81 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.external_users.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/iam/v1/message.proto";
+import "whnova/core/time/v1/message.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+  rpc Read(ReadRequest) returns (ReadResponse) {}
+  rpc Delete(DeleteRequest) returns (DeleteResponse) {}
+  rpc List(ListRequest) returns (stream ListResponse) {}
+}
+
+message ExternalUserId {
+  string issuer = 1 [(google.api.field_behavior) = REQUIRED];
+  string id = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateRequest {
+  string email = 1 [(google.api.field_behavior) = REQUIRED];
+  repeated whnova.core.iam.v1.RoleId initial_role_ids = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {
+  message Success {
+    ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  message UserDoesNotExist {}
+
+  message AlreadyMember {}
+
+  oneof result {
+    Success success = 1;
+    UserDoesNotExist user_does_not_exist = 2;
+    AlreadyMember already_member = 3;
+  }
+}
+
+message ReadRequest {
+  ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ReadResponse {
+  ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+  string email = 2 [(google.api.field_behavior) = REQUIRED];
+  string first_name = 3 [(google.api.field_behavior) = REQUIRED];
+  string last_name = 4 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.time.v1.IsoDateTime joined_on = 5 [(google.api.field_behavior) = REQUIRED];
+}
+
+message DeleteRequest {
+  ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message DeleteResponse {
+  message Success {}
+
+  message LastManageTeamHolder {}
+
+  oneof result {
+    Success success = 1;
+    LastManageTeamHolder last_manage_team_holder = 2;
+  }
+}
+
+message ListRequest {}
+
+message ListResponse {
+  message Entry {
+    ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+    string email = 2 [(google.api.field_behavior) = REQUIRED];
+    string first_name = 3 [(google.api.field_behavior) = REQUIRED];
+    string last_name = 4 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.time.v1.IsoDateTime joined_on = 5 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
+}
