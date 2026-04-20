@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.3](https://github.com/whitehawkcec/whnova-proto/compare/0.5.2...0.5.3) (2026-04-20)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `full_questionnaire_submissions.v1` `created_at` ([c646fc0](https://github.com/whitehawkcec/whnova-proto/commit/c646fc0504a4260bbc94bd33af11406f6d008410))
+* **proto/api-riskwise-client:** add `resources.external_users__0__roles.v1` ([3302241](https://github.com/whitehawkcec/whnova-proto/commit/330224115b1ff43c3eb61ac3e8b893b032bab82f))
+* **proto/api-riskwise-client:** add `resources.external_users.v1` ([6d304df](https://github.com/whitehawkcec/whnova-proto/commit/6d304df8df4ca7b568cd547d3b39825d6830e5e4))
+* **proto/api-riskwise-client:** add `resources.roles.v1` ([03848ac](https://github.com/whitehawkcec/whnova-proto/commit/03848ac1865e40559ce039f4a5829577fa7b6456))
+* **proto/core:** add `iam.v1` ([944fbdc](https://github.com/whitehawkcec/whnova-proto/commit/944fbdc903945e2c7aef8dcd9b54889144bd9a1c))
+
 ### [0.5.2](https://github.com/WhitehawkCEC/whnova-proto/compare/0.5.1...0.5.2) (2026-04-07)
 
 ### Features
