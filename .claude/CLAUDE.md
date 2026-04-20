@@ -16,6 +16,7 @@ pnpm run release                                         # Release via standard-
 
 - Edition: `edition = "2023"` (not proto3)
 - Messages in `message.proto`, RPCs in `service.proto`
+- `service.proto` must not import from other `service.proto`; put shared messages in `proto/core/`
 - Directory structure mirrors package path: `proto/<module>/<full>/<package>/<path>/v1/`
 - Core packages: `whnova.core.<domain>.v1`
 - API packages: `whnova.api.<name>.resources.<resource>.v<version>`
