@@ -5,6 +5,7 @@ package whnova.api.riskwise.client.resources.full_questionnaire_submissions.v1;
 import "google/api/field_behavior.proto";
 import "whnova/core/questionnaire/assessment/v1/message.proto";
 import "whnova/core/questionnaire/v1/message.proto";
+import "whnova/core/time/v1/message.proto";
 
 service Service {
   rpc Create(CreateRequest) returns (CreateResponse) {}
@@ -76,6 +77,7 @@ message ReadResponse {
   repeated CategoryScore category_scores = 4 [(google.api.field_behavior) = REQUIRED];
   whnova.core.questionnaire.assessment.v1.RiskScore overall_score = 5 [(google.api.field_behavior) = REQUIRED];
   whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 6 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.time.v1.IsoDateTime created_at = 7 [(google.api.field_behavior) = REQUIRED];
 }
 
 message ListRequest {}
@@ -87,6 +89,7 @@ message ListResponse {
     whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
     whnova.core.questionnaire.assessment.v1.RiskScore overall_score = 4 [(google.api.field_behavior) = REQUIRED];
     whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 5 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.time.v1.IsoDateTime created_at = 6 [(google.api.field_behavior) = REQUIRED];
   }
 
   repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
