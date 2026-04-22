@@ -1,0 +1,18 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.product_checkout.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/product/v1/message.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+}
+
+message CreateRequest {
+  whnova.core.product.v1.ProductId product_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {
+  string checkout_url = 1 [(google.api.field_behavior) = REQUIRED];
+}
