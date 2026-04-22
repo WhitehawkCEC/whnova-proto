@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/WhitehawkCEC/whnova-proto/compare/0.5.3...0.5.4) (2026-04-22)
+
+
+### Features
+
+* **proto:** add product ([524cfb8](https://github.com/WhitehawkCEC/whnova-proto/commit/524cfb8c7025461456f40b7508c02238f0d0ec58))
+* **proto:** add product catalog service ([047ff6f](https://github.com/WhitehawkCEC/whnova-proto/commit/047ff6fd96de4c46422ad4b1e23ec65ef969c8cf))
+* **proto:** add product checkout service ([0f6909c](https://github.com/WhitehawkCEC/whnova-proto/commit/0f6909ce4330311f1f9cebefe9c79c931fdc4eb7))
+
+
+### Bug Fixes
+
+* **proto:** deprecate credit checkout service ([34e5528](https://github.com/WhitehawkCEC/whnova-proto/commit/34e5528bb0f4e8c1c7e1f979088b7872cb7e8703))
+
 ### [0.5.3](https://github.com/whitehawkcec/whnova-proto/compare/0.5.2...0.5.3) (2026-04-20)
 
 ### Features
