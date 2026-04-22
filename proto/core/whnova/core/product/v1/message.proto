@@ -1,0 +1,10 @@
+edition = "2023";
+
+package whnova.core.product.v1;
+
+enum ProductId {
+  PRODUCT_ID_UNSPECIFIED = 0;
+  PRODUCT_ID_RISK_SNAPSHOT = 1;
+  PRODUCT_ID_ADVISED_RISK_REVIEW = 2;
+  PRODUCT_ID_COMPREHENSIVE_RISK_ADVISORY = 3;
+}
