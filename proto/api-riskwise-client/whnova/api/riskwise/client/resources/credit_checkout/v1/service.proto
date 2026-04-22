@@ -5,6 +5,8 @@ package whnova.api.riskwise.client.resources.credit_checkout.v1;
 import "google/api/field_behavior.proto";
 
 service Service {
+  option deprecated = true;
+
   rpc Create(CreateRequest) returns (CreateResponse) {}
 }
 
