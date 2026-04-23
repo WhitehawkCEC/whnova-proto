@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.6](https://github.com/whitehawkcec/whnova-proto/compare/0.5.5...0.5.6) (2026-04-23)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `REQUIRED` ([f33e4ca](https://github.com/whitehawkcec/whnova-proto/commit/f33e4ca3ba6ea5df0082ff18443cdab84559dae4))
+* **proto/api-riskwise-client:** add `resources.external_users__0__roles.v2` ([80260a1](https://github.com/whitehawkcec/whnova-proto/commit/80260a1f0f571375280915c10c8f015fd26ab0a6))
+* **proto/core:** add `user.external.v1` ([845564e](https://github.com/whitehawkcec/whnova-proto/commit/845564ef0eb90accdb92389883f084ec82eab8d9))
+
 ### [0.5.5](https://github.com/WhitehawkCEC/whnova-proto/compare/0.5.4...0.5.5) (2026-04-23)
 
 ### [0.5.4](https://github.com/WhitehawkCEC/whnova-proto/compare/0.5.3...0.5.4) (2026-04-22)
