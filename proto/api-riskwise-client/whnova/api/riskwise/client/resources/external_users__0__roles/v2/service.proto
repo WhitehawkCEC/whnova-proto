@@ -1,0 +1,64 @@
+edition = "2023";
+
+// buf:lint:ignore PACKAGE_LOWER_SNAKE_CASE
+package whnova.api.riskwise.client.resources.external_users__0__roles.v2;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/iam/v1/message.proto";
+import "whnova/core/user/external/v1/message.proto";
+
+service Service {
+  rpc Create(CreateRequest) returns (CreateResponse) {}
+  rpc Delete(DeleteRequest) returns (DeleteResponse) {}
+  rpc List(ListRequest) returns (stream ListResponse) {}
+}
+
+message CreateRequest {
+  whnova.core.user.external.v1.ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.iam.v1.RoleId role_id = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateResponse {
+  message Success {}
+
+  message AlreadyAssigned {}
+
+  oneof result {
+    Success success = 1;
+    AlreadyAssigned already_assigned = 2;
+  }
+}
+
+message DeleteRequest {
+  whnova.core.user.external.v1.ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.iam.v1.RoleId role_id = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message DeleteResponse {
+  message Success {}
+
+  message LastManageTeamHolder {}
+
+  message NotAssigned {}
+
+  oneof result {
+    Success success = 1;
+    LastManageTeamHolder last_manage_team_holder = 2;
+    NotAssigned not_assigned = 3;
+  }
+}
+
+message ListRequest {
+  whnova.core.user.external.v1.ExternalUserId external_user_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListResponse {
+  message Entry {
+    whnova.core.iam.v1.RoleId role_id = 1 [(google.api.field_behavior) = REQUIRED];
+    string key = 2 [(google.api.field_behavior) = REQUIRED];
+    string name = 3 [(google.api.field_behavior) = REQUIRED];
+    string description = 4 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
+}
