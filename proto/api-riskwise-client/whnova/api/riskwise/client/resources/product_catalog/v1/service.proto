@@ -12,14 +12,5 @@ service Service {
 message GetRequest {}
 
 message GetResponse {
-  repeated Product products = 1 [(google.api.field_behavior) = REQUIRED];
-}
-
-message Product {
-  whnova.core.product.v1.ProductId id = 1 [(google.api.field_behavior) = REQUIRED];
-  string name = 2 [(google.api.field_behavior) = REQUIRED];
-  string description = 3 [(google.api.field_behavior) = REQUIRED];
-  repeated string features = 4 [(google.api.field_behavior) = REQUIRED];
-  int32 amount = 5 [(google.api.field_behavior) = REQUIRED];
-  string currency = 6 [(google.api.field_behavior) = REQUIRED];
+  repeated whnova.core.product.v1.Product products = 1 [(google.api.field_behavior) = REQUIRED];
 }

@@ -2,6 +2,17 @@ edition = "2023";
 
 package whnova.core.product.v1;
 
+import "google/api/field_behavior.proto";
+
+message Product {
+  ProductId id = 1 [(google.api.field_behavior) = REQUIRED];
+  string name = 2 [(google.api.field_behavior) = REQUIRED];
+  string description = 3 [(google.api.field_behavior) = REQUIRED];
+  repeated string features = 4 [(google.api.field_behavior) = REQUIRED];
+  int32 amount = 5 [(google.api.field_behavior) = REQUIRED];
+  string currency = 6 [(google.api.field_behavior) = REQUIRED];
+}
+
 enum ProductId {
   PRODUCT_ID_UNSPECIFIED = 0;
   PRODUCT_ID_RISK_SNAPSHOT = 1;
