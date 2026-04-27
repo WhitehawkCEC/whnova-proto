@@ -24,16 +24,15 @@ jobs:
         run: |
           git fetch --tags --force
 
-      - name: Install nix
-        uses: cachix/install-nix-action@v31
+      - uses: jdx/mise-action@v4
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
         run: |
-          echo "STORE_PATH=$(nix develop --command pnpm store path)" >> $GITHUB_OUTPUT
+          echo "STORE_PATH=$(mise exec -- pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Cache pnpm
         uses: actions/cache@v5
@@ -45,15 +44,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          nix develop --command pnpm install
+          mise exec -- pnpm install
 
       - name: Build all
         run: |
-          nix develop --command ./.ci/all-ci build $(git describe)
+          mise exec -- ./.ci/all-ci build $(git describe)
 
       - name: Deploy all
         run: |
-          nix develop --command ./.ci/all-ci deploy
+          mise exec -- ./.ci/all-ci deploy
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
