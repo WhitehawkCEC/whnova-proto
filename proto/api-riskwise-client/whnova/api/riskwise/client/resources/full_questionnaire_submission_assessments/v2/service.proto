@@ -44,7 +44,7 @@ message ReadResponse {
   }
 
   message QuestionEntry {
-    whnova.core.questionnaire.assessment.v1.RiskScore score = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScoreBreakdown score = 1 [(google.api.field_behavior) = REQUIRED];
     Observation observation = 2 [(google.api.field_behavior) = REQUIRED];
     Recommendation recommendation = 3 [(google.api.field_behavior) = REQUIRED];
   }
@@ -88,19 +88,13 @@ message ReadResponse {
     QuestionEntry q36 = 36 [(google.api.field_behavior) = REQUIRED];
   }
 
-  message CategoryScore {
-    whnova.core.questionnaire.v1.QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
-    whnova.core.questionnaire.assessment.v1.RiskScore score = 2 [(google.api.field_behavior) = REQUIRED];
-  }
-
   whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
   whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 2 [(google.api.field_behavior) = REQUIRED];
   whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
   QuestionEntries question_entries = 4 [(google.api.field_behavior) = REQUIRED];
-  repeated CategoryScore category_scores = 5 [(google.api.field_behavior) = REQUIRED];
-  whnova.core.questionnaire.assessment.v1.RiskScore overall_score = 6 [(google.api.field_behavior) = REQUIRED];
-  whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 7 [(google.api.field_behavior) = REQUIRED];
-  whnova.core.time.v1.IsoDateTime created_at = 8 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.assessment.v1.RiskScoreOverall overall_score = 5 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 6 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.time.v1.IsoDateTime created_at = 7 [(google.api.field_behavior) = REQUIRED];
 }
 
 message ListRequest {}
@@ -110,8 +104,8 @@ message ListResponse {
     whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
     whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 2 [(google.api.field_behavior) = REQUIRED];
     whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
-    whnova.core.questionnaire.assessment.v1.RiskScore total_weighted_score = 4 [(google.api.field_behavior) = REQUIRED];
-    whnova.core.questionnaire.assessment.v1.RiskLevel risk_level = 5 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScoreOverall overall_score = 4 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 5 [(google.api.field_behavior) = REQUIRED];
     whnova.core.time.v1.IsoDateTime created_at = 6 [(google.api.field_behavior) = REQUIRED];
   }
 
