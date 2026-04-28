@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.7](https://github.com/whitehawkcec/whnova-proto/compare/0.5.6...0.5.7) (2026-04-28)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `resources.full_questionnaire_submission_assessments.v1` ([a68f705](https://github.com/whitehawkcec/whnova-proto/commit/a68f70514ece4862ab28cc18605f85fe4867f07f))
+
 ### [0.5.6](https://github.com/whitehawkcec/whnova-proto/compare/0.5.5...0.5.6) (2026-04-23)
 
 
