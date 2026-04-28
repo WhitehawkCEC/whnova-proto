@@ -1,0 +1,87 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.full_questionnaire_submission_assessments.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/assessment/v1/message.proto";
+import "whnova/core/questionnaire/v1/message.proto";
+import "whnova/core/time/v1/message.proto";
+
+service Service {
+  rpc Read(ReadRequest) returns (ReadResponse) {}
+  rpc List(ListRequest) returns (stream ListResponse) {}
+}
+
+message ReadRequest {
+  whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ReadResponse {
+  message QuestionScores {
+    whnova.core.questionnaire.assessment.v1.RiskScore q1 = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q2 = 2 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q3 = 3 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q4 = 4 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q5 = 5 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q6 = 6 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q7 = 7 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q8 = 8 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q9 = 9 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q10 = 10 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q11 = 11 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q12 = 12 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q13 = 13 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q14 = 14 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q15 = 15 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q16 = 16 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q17 = 17 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q18 = 18 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q19 = 19 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q20 = 20 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q21 = 21 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q22 = 22 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q23 = 23 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q24 = 24 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q25 = 25 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q26 = 26 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q27 = 27 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q28 = 28 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q29 = 29 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q30 = 30 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q31 = 31 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q32 = 32 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q33 = 33 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q34 = 34 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q35 = 35 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore q36 = 36 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  message CategoryScore {
+    whnova.core.questionnaire.v1.QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore score = 2 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 2 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
+  QuestionScores question_scores = 4 [(google.api.field_behavior) = REQUIRED];
+  repeated CategoryScore category_scores = 5 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.assessment.v1.RiskScore overall_score = 6 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.questionnaire.assessment.v1.RiskLevel overall_level = 7 [(google.api.field_behavior) = REQUIRED];
+  whnova.core.time.v1.IsoDateTime created_at = 8 [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListRequest {}
+
+message ListResponse {
+  message Entry {
+    whnova.core.questionnaire.v1.QuestionnaireSubmissionId submission_id = 1 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.v1.LeadQuestionnaireCompleteSubmission lead = 2 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.v1.MainQuestionnaireCompleteSubmission main = 3 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskScore total_weighted_score = 4 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.questionnaire.assessment.v1.RiskLevel risk_level = 5 [(google.api.field_behavior) = REQUIRED];
+    whnova.core.time.v1.IsoDateTime created_at = 6 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Entry entries = 1 [(google.api.field_behavior) = REQUIRED];
+}
