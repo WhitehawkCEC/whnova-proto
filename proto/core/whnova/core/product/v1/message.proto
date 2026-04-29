@@ -11,6 +11,7 @@ message Product {
   repeated string features = 4 [(google.api.field_behavior) = REQUIRED];
   int32 amount = 5 [(google.api.field_behavior) = REQUIRED];
   string currency = 6 [(google.api.field_behavior) = REQUIRED];
+  bool most_popular = 7 [(google.api.field_behavior) = REQUIRED];
 }
 
 enum ProductId {
