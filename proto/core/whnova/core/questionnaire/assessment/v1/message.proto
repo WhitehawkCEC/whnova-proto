@@ -3,6 +3,7 @@ edition = "2023";
 package whnova.core.questionnaire.assessment.v1;
 
 import "google/api/field_behavior.proto";
+import "whnova/core/questionnaire/v1/message.proto";
 
 enum RiskLevel {
   RISK_LEVEL_UNSPECIFIED = 0;
@@ -14,4 +15,21 @@ enum RiskLevel {
 message RiskScore {
   double value = 1 [(google.api.field_behavior) = REQUIRED];
   double max_value = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message RiskScoreBreakdown {
+  RiskScore raw = 1 [(google.api.field_behavior) = REQUIRED];
+  RiskScore weighted = 2 [(google.api.field_behavior) = REQUIRED];
+  double weight = 3 [(google.api.field_behavior) = REQUIRED];
+}
+
+message QuestionCategoryRiskScore {
+  whnova.core.questionnaire.v1.QuestionCategory category = 1 [(google.api.field_behavior) = REQUIRED];
+  RiskScoreBreakdown score = 2 [(google.api.field_behavior) = REQUIRED];
+}
+
+message RiskScoreOverall {
+  RiskScore raw = 1 [(google.api.field_behavior) = REQUIRED];
+  RiskScore weighted = 2 [(google.api.field_behavior) = REQUIRED];
+  repeated QuestionCategoryRiskScore category_scores = 3 [(google.api.field_behavior) = REQUIRED];
 }

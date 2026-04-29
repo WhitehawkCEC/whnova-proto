@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/whitehawkcec/whnova-proto/compare/0.5.8...0.6.0) (2026-04-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* **proto/api-riskwise-client:** remove `resources.full_questionnaire_submission_assessments.v1`
+* **proto/api-riskwise-client:** change shape of `resources.full_questionnaire_submission_assessments.v2`
+
+### Features
+
+* **proto/api-riskwise-client:** change shape of `resources.full_questionnaire_submission_assessments.v2` ([6031c32](https://github.com/whitehawkcec/whnova-proto/commit/6031c326e5d4a2f7d738a1dc534a92138bcbc6a9))
+* **proto/api-riskwise-client:** remove `resources.full_questionnaire_submission_assessments.v1` ([78c7311](https://github.com/whitehawkcec/whnova-proto/commit/78c7311bc4ad8446df4717ca00fded8e4228981c))
+* **proto/core:** add `RiskScore*` to `whnova.core.questionnaire.assessment.v1` ([6d54f36](https://github.com/whitehawkcec/whnova-proto/commit/6d54f3660ddb1989ad99a2da09090adc4fe6b3e9))
+
+### [0.5.8](https://github.com/whitehawkcec/whnova-proto/compare/0.5.7...0.5.8) (2026-04-28)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `resources.full_questionnaire_submission_assessments.v2` ([cad22bf](https://github.com/whitehawkcec/whnova-proto/commit/cad22bfc36476c3ded9f3308957c8e24d1265bf4))
+
+### [0.5.7](https://github.com/whitehawkcec/whnova-proto/compare/0.5.6...0.5.7) (2026-04-28)
+
+
+### Features
+
+* **proto/api-riskwise-client:** add `resources.full_questionnaire_submission_assessments.v1` ([a68f705](https://github.com/whitehawkcec/whnova-proto/commit/a68f70514ece4862ab28cc18605f85fe4867f07f))
+
 ### [0.5.6](https://github.com/whitehawkcec/whnova-proto/compare/0.5.5...0.5.6) (2026-04-23)
 
 
