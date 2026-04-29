@@ -11,6 +11,8 @@ service Service {
 
 message CreateRequest {
   whnova.core.product.v1.ProductId product_id = 1 [(google.api.field_behavior) = REQUIRED];
+  string success_url = 2 [(google.api.field_behavior) = REQUIRED];
+  string cancel_url = 3 [(google.api.field_behavior) = REQUIRED];
 }
 
 message CreateResponse {
