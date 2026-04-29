@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.1](https://github.com/WhitehawkCEC/whnova-proto/compare/0.6.0...0.6.1) (2026-04-29)
+
+
+### Features
+
+* **proto/core:** add most_popular to product ([c682205](https://github.com/WhitehawkCEC/whnova-proto/commit/c6822057f0fc54379f7e425008aa5140d8c1ff91))
+
 ## [0.6.0](https://github.com/whitehawkcec/whnova-proto/compare/0.5.8...0.6.0) (2026-04-28)
 
 
