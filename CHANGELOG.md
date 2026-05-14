@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.7.1](https://github.com/WhitehawkCEC/whnova-proto/compare/0.7.0...0.7.1) (2026-05-14)
+
+
+### Features
+
+* **proto/api-riskwise-client:** service to retrieve product item balances ([fc005b7](https://github.com/WhitehawkCEC/whnova-proto/commit/fc005b724a5ed3761f8b32286e026549a17786b1))
+* **proto/core:** product item types ([5d78423](https://github.com/WhitehawkCEC/whnova-proto/commit/5d78423746801b1c49cb7c1af4ee26fea86f8281))
+
 ## [0.7.0](https://github.com/WhitehawkCEC/whnova-proto/compare/0.6.2...0.7.0) (2026-04-29)
 
 
