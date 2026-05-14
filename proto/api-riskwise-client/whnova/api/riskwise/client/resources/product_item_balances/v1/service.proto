@@ -1,0 +1,21 @@
+edition = "2023";
+
+package whnova.api.riskwise.client.resources.product_item_balances.v1;
+
+import "google/api/field_behavior.proto";
+import "whnova/core/product/v1/message.proto";
+
+service Service {
+  rpc Get(GetRequest) returns (GetResponse) {}
+}
+
+message GetRequest {}
+
+message GetResponse {
+  message Balance {
+    whnova.core.product.v1.ProductItem item = 1 [(google.api.field_behavior) = REQUIRED];
+    int32 count = 2 [(google.api.field_behavior) = REQUIRED];
+  }
+
+  repeated Balance balances = 1 [(google.api.field_behavior) = REQUIRED];
+}
